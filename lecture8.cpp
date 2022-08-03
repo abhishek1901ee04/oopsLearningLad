@@ -28,7 +28,6 @@ int main(){
     man1.display();
     humanBeing man2("amit",14);
        man2.display();
- 
- 
+       
     return 0;
 }
