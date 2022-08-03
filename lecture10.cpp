@@ -3,32 +3,23 @@ using namespace std;
 
 // c++ destructors to release Resources with example 
 
-class humanBeing{
-    private:
-    int *age;
-    string *name;
+class human{
 public:
-    humanBeing(string iname, int iage){
-       age = new int;
-       name = new string;
-
-       *age = iage;
-       *name = iname;
-    }
-    void display(){
-        cout<<"hello boys I am "<<*name<<" and i am "<<*age<<" year old"<<endl;
-    }
-    ~humanBeing(){
-        delete age;
-        delete name;
-        cout<<"destructer called and memory released"<<endl;
-    }
-  
+  static int human_count;
+  human(){
+    human_count++;
+  }
+  void humanTotal(){
+    cout<<"there are "<<human_count <<" people in this program"<<endl;
+  }
 };
+int human::human_count=0;
 int main(){
-   humanBeing *anil = new humanBeing("abhishek ",21);
-   anil->display();
-    delete anil;
+    human amit;
+    human ashu_p;
+    human ankit;
+    human abhishek;
+    amit.humanTotal();
     return 0;
 
 }
