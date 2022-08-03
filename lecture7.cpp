@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 // overoading constructor 
+// if you overload the constructor but did not write the default constructor then tum bina parameter passs kiye class nahi bana skte error deta hia agar koi constructor anhi banao to default constructor apne aap bana leta hai 
 class humanBeing{
     private:
     int age;
