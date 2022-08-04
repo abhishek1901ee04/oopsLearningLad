@@ -10,13 +10,14 @@ void init_code(){
 
     #endif // ONLINE_JUDGE
 }
-// Accessing the overridden methods in Cpp
+// this pointer in Cpp
 class Person{
 private:
     int age;
 public:
     // if we pass parameter with same name as age will give garbage vlaues
     void setAge(int age){
+        // this produces garbage values
         //age= age;
         this->age = age;
     }
