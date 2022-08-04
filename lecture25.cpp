@@ -43,4 +43,7 @@ int main(){
 // notes 
 //  when we didn't specify the which overritten function to execute it 
 // execute the base class one 
-// but when we write virtual ahead of overwritten function 
+// but when we write virtual ahead of overwritten function in base class 
+// when it found the function is overwritten in derived class it executes it 
+// agar farmer class main introduce methdo overwritten anhi hota to person 
+// class ka hi introduce call hota 
