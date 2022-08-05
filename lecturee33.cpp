@@ -10,10 +10,12 @@ void init_code(){
 
     #endif // ONLINE_JUDGE
 }
-// operator overloading function 
+
+// implementing the ++  & -- prefix operation 
+
 class Marks{
 private:
-    int mark;
+int mark;
 public:
     Marks(){
         mark =0;
@@ -22,24 +24,28 @@ public:
         mark = x;
     }
     void yourmarkplease(){
-        cout<<"your mark is "<<mark <<endl;
+        cout<<" your mark is "<<mark <<endl;
     }
-    void operator+=(int bp){
-        mark = mark + bp;
+    Marks operator++(int){
+        Marks duplicate(*this);
+        mark+=1;
+        return duplicate;
     }
-    friend void operator-=(Marks &curobj , int redmark);
+    friend Marks operator--(Marks &,int);
 };
-void operator-=(Marks &curobj,int redmark){
-     curobj.mark -=redmark;
+
+Marks operator--(Marks &m,int){
+    Marks duplicate(m);
+    m.mark -= 1;
+    return duplicate;
 }
 
 int main(){
     init_code();
-    Marks am(25);
+    Marks am(63);
+    (am++).yourmarkplease();
     am.yourmarkplease();
-    am +=(15);
-    am.yourmarkplease();
-    am -=(10);
+    (am--).yourmarkplease();
     am.yourmarkplease();
     return 0;
 }
