@@ -1,3 +1,0 @@
-overloaded new.size is 40
-name : abhishek age: 22
-overloaded delete 
